@@ -1,0 +1,19 @@
+# ─────────────────────────────────────────────────────────────
+# BUSINESS DATA — never goes into git.
+# This is the shop's live records and photos. It lives only on
+# the machine that runs the app, and is backed up by copying the
+# folder (see the User Guide), not by git.
+# ─────────────────────────────────────────────────────────────
+velvet-fox-data.json
+velvet-fox-data.json.tmp
+/photos/
+/backups/
+
+# ─────────────────────────────────────────────────────────────
+# OS / editor noise
+# ─────────────────────────────────────────────────────────────
+.DS_Store
+__pycache__/
+*.pyc
+~$*
+*.tmp
