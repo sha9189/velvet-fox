@@ -36,6 +36,10 @@ the whole folder to iCloud / Dropbox / a USB stick.
 
 ## Updating the client's copy
 
-Push code changes from the dev machine, then on the shop's Mac run `git pull` in
-this folder. The data files are ignored, so a pull never touches them. Full
-first-time setup steps are kept with the dev notes.
+Push code from the dev machine (`git add -A && git commit && git push`). On the
+shop's Mac, run `git pull` in the app folder — the data files are git-ignored, so
+a pull never touches them. The client has a small local `Update Velvet Fox.command`
+(one line: `cd` + `git pull`) that isn't part of this repo; it's copied to their
+Mac by hand and listed in `.gitignore`.
+
+Full first-time repo setup steps are kept with the dev notes.

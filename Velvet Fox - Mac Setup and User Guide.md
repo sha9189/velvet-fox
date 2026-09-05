@@ -12,6 +12,7 @@ All of these need to live together in **one folder**. Don't separate them.
 | File | What it is |
 |---|---|
 | `Start Velvet Fox.command` | What you double-click to open the app. |
+| `Update Velvet Fox.command` | Double-click to install a new version (your records are left alone). Your helper adds this file. |
 | `VelvetFox.html` | The app itself. Never open this one directly. |
 | `velvetfox_server.py` | The engine that reads and writes your files. |
 | `velvet-fox-data.json` | **All your inventory and sales.** This is your records. |
@@ -81,6 +82,8 @@ A Terminal window appears with the Velvet Fox banner, and the app opens in your 
 **To stop:** close the Terminal window (or press `Control + C` in it). Your data is already saved; the app saves after every change.
 
 > **Which browser?** Any of them. Safari, Chrome, Edge and Firefox all work. It opens in whichever is your default.
+
+**To get an update:** when your technical helper says there's a new version, close the app and double-click **Update Velvet Fox.command**. It downloads the latest program files; your inventory, sales and photos are left untouched. First run: right-click it and choose **Open**, same as Step 4.
 
 ---
 
