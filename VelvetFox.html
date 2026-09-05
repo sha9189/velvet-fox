@@ -318,14 +318,14 @@
     <p class="page-note" id="inv-count"></p>
     <div class="table-wrap"><table>
       <colgroup>
-        <col style="width:5%"><col style="width:8%"><col style="width:11%"><col style="width:28%">
-        <col style="width:8%"><col style="width:6%"><col style="width:7%">
-        <col style="width:16%"><col style="width:11%">
+        <col style="width:4%"><col style="width:7%"><col style="width:10%"><col style="width:24%">
+        <col style="width:7%"><col style="width:6%"><col style="width:6%">
+        <col style="width:14%"><col style="width:10%"><col style="width:12%">
       </colgroup>
       <thead><tr>
       <th></th><th>ID</th><th>Category</th><th>Description</th>
       <th class="num">Bought</th><th class="num">Cost</th><th class="num">Price</th>
-      <th class="num">On hand</th><th></th>
+      <th class="num">On hand</th><th>Where it is</th><th></th>
     </tr></thead><tbody id="inv-body"></tbody></table></div>
   </section>
 
@@ -788,7 +788,7 @@ function renderInventory(){
 
   const body=document.getElementById("inv-body");
   if(!list.length){
-    body.innerHTML=`<tr><td colspan="9" class="empty">Nothing matches. Try a different search, or set “Show” to All items.</td></tr>`;
+    body.innerHTML=`<tr><td colspan="10" class="empty">Nothing matches. Try a different search, or set “Show” to All items.</td></tr>`;
     return;
   }
   body.innerHTML = list.slice(0,400).map(i=>{
@@ -813,12 +813,13 @@ function renderInventory(){
       <td class="num">${money(i.unitCost)}</td>
       <td class="num">${money(i.listPrice)}</td>
       <td class="num cell-pills">${pill}</td>
+      <td class="cell-desc">${esc(i.location)||'<span class="muted">—</span>'}</td>
       <td class="num" style="white-space:nowrap">
         ${oh>0?`<button class="btn sm" data-sell="${esc(i.id)}">Sell</button> `:""}
         <button class="btn sm ghost" data-edit="${esc(i.id)}">Edit</button>
       </td></tr>`;
   }).join("") + (list.length>400
-    ? `<tr><td colspan="9" class="empty">Showing the first 400. Use search to narrow it down.</td></tr>`:"");
+    ? `<tr><td colspan="10" class="empty">Showing the first 400. Use search to narrow it down.</td></tr>`:"");
 
   loadThumbs(body);
 }
