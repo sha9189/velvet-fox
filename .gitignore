@@ -13,7 +13,7 @@ velvet-fox-data.json.tmp
 # Client-only — lives only on the shop's Mac, copied there by hand.
 # A one-liner that runs `git pull` in the app folder.
 # ─────────────────────────────────────────────────────────────
-# Update Velvet Fox.command
+Update Velvet Fox.command
 
 # ─────────────────────────────────────────────────────────────
 # OS / editor noise
